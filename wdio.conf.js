@@ -128,7 +128,7 @@ exports.config = {
     // If you are using Cucumber you need to specify the location of your step definitions.
     cucumberOpts: {
         require: [
-            './e2e/features/step-definitions/**/*.steps.js'
+            './e2e/features/step_definitions/**/*.steps.js'
         ],        // <string[]> (file/dir) require files before executing features
         backtrace: false,   // <boolean> show full backtrace for errors
         compiler: [],       // <string[]> ("extension:module") require files with the given EXTENSION after requiring MODULE (repeatable)
