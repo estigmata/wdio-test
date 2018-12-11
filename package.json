@@ -25,12 +25,12 @@
   "homepage": "https://github.com/estigmata/wdio-test#readme",
   "dependencies": {
     "chai": "^4.2.0",
-    "cucumber": "^5.0.3",
     "eslint": "^5.10.0",
     "eslint-plugin-webdriverio": "^1.0.1",
     "selenium-standalone": "^6.15.4",
     "wdio-cucumber-framework": "^2.2.8",
     "wdio-selenium-standalone-service": "0.0.11",
+    "wdio-spec-reporter": "^0.1.5",
     "webdriverio": "^4.14.1"
   }
 }

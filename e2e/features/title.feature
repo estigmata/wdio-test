@@ -4,9 +4,9 @@ Feature: Title check
   and check its title
 
   Scenario: Get the title of webpage
-    Given I go to the website "http://www.google.com"
-    Then I expect the title of the page "Google"
-
-  Scenario: Get the title of webpage
-    Given I go to the website "https://trello.com/"
-    Then I expect the title of the page "Trello"
+    Given I go to the website
+    Then I expect the title of the page
+      | url                   | title  |
+      | http://www.google.com | Google |
+      | http://www.bing.com   | Bing   |
+      | http://trello.com     | Trello |

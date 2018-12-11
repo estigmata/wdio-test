@@ -1,10 +1,17 @@
 const { Given, Then } = require('cucumber');
 const expect = require('chai').expect;
 
-Given(/^I go to the website "([^"]*)"$/, (url) => {
-  browser.url(url);
-});
+// Given(/^I go to the website$/, {timeout: 30000}, (data) => {
+//   this.values = data.hashes();
+//   this.values.map(element => console.log(element.url));
+// });
 
-Then(/^I expect the title of the page "([^"]*)"$/, (title) => {
-  expect(browser.getTitle()).to.be.eql(title);
+Given(/^I go to the website$/, () => {});
+
+Then(/^I expect the title of the page$/, (data) => {
+  this.values = data.hashes();
+  this.values.map(element => {
+    browser.url(element.url);
+    return expect(browser.getTitle()).to.be.eql(element.title);
+  });
 });
